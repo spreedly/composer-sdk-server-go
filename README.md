@@ -123,7 +123,8 @@ func main() {
 
 		ip, err := getIP(r)
 		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
+			log.Printf("client IP error: %v", err)
+			http.Error(w, "checkpoint request failed", http.StatusInternalServerError)
 			return
 		}
 
@@ -139,7 +140,8 @@ func main() {
 			UseVerificationId: r.Header.Get("X-Dodgeball-Verification-Id"),
 		})
 		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
+			log.Printf("checkpoint error: %v", err)
+			http.Error(w, "checkpoint request failed", http.StatusInternalServerError)
 			return
 		}
 
