@@ -27,10 +27,12 @@ jobs:
           persist-credentials: false
 
       # The latest Go, so govulncheck only reports what users can't fix by
-      # updating Go themselves.
+      # updating Go themselves. No cache, so the tests and tools build clean
+      # instead of from the caches CI saves on main.
       - uses: actions/setup-go@v5
         with:
           go-version: stable
+          cache: false
 
       - name: Check tag, version and CHANGELOG.md
         id: check
