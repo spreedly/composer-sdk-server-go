@@ -30,7 +30,7 @@ The Composer Server SDK for Go makes integration with the Composer API easy and 
 
 ## Related
 
-Check out the [Client SDK](https://npmjs.com/package/@dodgeball/trust-sdk-client) for how to integrate Composer into your frontend applications.
+Check out the [Client SDK](https://www.npmjs.com/package/@spreedly/composer-sdk-client) for how to integrate Composer into your frontend applications.
 
 [Composer examples](https://github.com/spreedly/composer-examples) has a runnable example server for this SDK in `server/go`, and a web client that calls it.
 
@@ -247,7 +247,7 @@ The SDK logs through Go's standard `log` package. At the default `ComposerLogLev
 
 | Parameter | Required | Description |
 | --- | --- | --- |
-| `SourceToken` | Either this or `SessionId` | A token representing the device making the request. Obtained from the [Client SDK](https://npmjs.com/package/@dodgeball/trust-sdk-client). |
+| `SourceToken` | Either this or `SessionId` | A token representing the device making the request. Obtained from the [Client SDK](https://www.npmjs.com/package/@spreedly/composer-sdk-client). |
 | `SessionId` | Either this or `SourceToken` | The current session ID of the request. |
 | `UserId` | No | The ID of the user in your database, once you know it (for example, after registration). |
 | `UseVerificationId` | No | `Checkpoint` only. The ID of a verification the user already completed. See [useVerification](#useverification). |
