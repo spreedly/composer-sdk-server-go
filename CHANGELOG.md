@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0 (unreleased)
+## 1.0.0 (2026-10-30)
 
 First release as `github.com/spreedly/composer-sdk-server-go`. If you're upgrading from `github.com/dodgeballhq/dodgeball-trust-sdk-go`, read **Changed** and **Removed**.
 
