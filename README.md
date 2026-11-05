@@ -166,8 +166,12 @@ func main() {
 
 ```js
 // In your frontend, with the Client SDK
+import { Composer } from "@spreedly/composer-sdk-client";
+
+const composer = new Composer("public-api-key...");
+
 const placeOrder = async (order, previousVerificationId = null) => {
-  const sourceToken = await dodgeball.getSourceToken();
+  const sourceToken = await composer.getSourceToken();
 
   const endpointResponse = await axios.post("/api/orders", { order }, {
     headers: {
@@ -183,7 +187,7 @@ const placeOrder = async (order, previousVerificationId = null) => {
     return;
   }
 
-  dodgeball.handleVerification(endpointResponse.data.verification, {
+  composer.handleVerification(endpointResponse.data.verification, {
     onVerified: async (verification) => {
       // The user completed the extra step: call your API again with the verification ID
       await placeOrder(order, verification.id);
