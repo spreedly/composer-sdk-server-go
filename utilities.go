@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-const Version = "1.0.0"
+const Version = "1.0.1"
 
 // sensitiveFields carry end-user information and are masked before anything is logged.
 // nextSteps is included because a blocked checkpoint returns integration config

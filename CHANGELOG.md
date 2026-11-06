@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 (2026-11-06)
+
+No changes to the SDK's code.
+
+### Changed
+- The README's frontend example imports `Composer` from `@spreedly/composer-sdk-client` and calls `composer.getSourceToken()` and `composer.handleVerification()`.
+
 ## 1.0.0 (2026-10-30)
 
 First release as `github.com/spreedly/composer-sdk-server-go`. If you're upgrading from `github.com/dodgeballhq/dodgeball-trust-sdk-go`, read **Changed** and **Removed**.
